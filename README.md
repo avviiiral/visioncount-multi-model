@@ -1,4 +1,10 @@
-# VisionCount Multi-Model — 10 Cameras × 10 Models
+# VisionCount Multi-Model
+
+A Python and YOLOv8 computer-vision application for multi-camera object counting, per-camera model management, and CSV-based analytics.
+
+**Core technologies:** Python · YOLOv8 · OpenCV · Streamlit · Pandas · RTSP · Computer Vision
+
+**Use case:** Demonstrates a configurable architecture for monitoring multiple camera streams and recording object counts for later analysis.
 
 Each camera runs its **own dedicated YOLOv8 model** in a separate background thread.
 Models are loaded lazily (on first frame) and cached in memory for the session.
@@ -32,6 +38,9 @@ vision_counter_multi/
 ---
 
 ## Setup
+
+> **Security:** Keep camera credentials and private RTSP URLs out of version control. Use local configuration or environment variables for real deployments, and never commit production camera addresses or passwords.
+
 
 ### 1. Install
 ```bash
@@ -124,3 +133,7 @@ Plan GPU/RAM accordingly or stagger camera startup if needed.
 **Camera shows "Cannot open stream"**
 → Test RTSP URL in VLC: Media → Open Network Stream.
 → Common path variants: `/stream1`, `/h264/ch01/main/av_stream`, `/cam/realmonitor`
+
+## Project Keywords
+
+`computer-vision` `yolov8` `object-counting` `multi-camera` `python` `streamlit` `opencv` `rtsp` `data-logging`
